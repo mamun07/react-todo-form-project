@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Card, Col, Row } from "antd";
+import RegForm from "./components/RegForm";
+import Regsiter from "./components/Regsiter";
 
 function App() {
+  const [inputText, setInputText] = useState("");
+  const [sectors, setSectors] = useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Row justify="center">
+        <Col xs={22} md={14} lg={8} xl={6}>
+          <Card style={{ margin: "30px 0" }}>
+            <p>
+              Please enter your name and pick the Sectors you are currently
+              involved in.
+            </p>
+            <RegForm
+              sectors={sectors}
+              setSectors={setSectors}
+              inputText={inputText}
+              setInputText={setInputText}
+              todos={todos}
+              setTodos={setTodos}
+            />
+          </Card>
+        </Col>
+      </Row>
+      <Row justify="center">
+        <Col xs={22} md={16} lg={12} xl={12}>
+          <Regsiter datas={todos} todos={todos} setTodos={setTodos} />
+        </Col>
+      </Row>
     </div>
   );
 }
