@@ -5,12 +5,13 @@ import Regsiter from "./components/Regsiter";
 
 function App() {
   const [inputText, setInputText] = useState("");
-  const [sectors, setSectors] = useState("");
+  const [sectors, setSectors] = useState(undefined);
   const [todos, setTodos] = useState([]);
+
   return (
     <div className="App">
       <Row justify="center">
-        <Col xs={22} md={14} lg={8} xl={6}>
+        <Col xs={22} md={18} lg={8} xl={8}>
           <Card style={{ margin: "30px 0" }}>
             <p>
               Please enter your name and pick the Sectors you are currently
