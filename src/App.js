@@ -15,7 +15,7 @@ function App() {
           <Card style={{ margin: "30px 0" }}>
             <p>
               Please enter your name and pick the Sectors you are currently
-              involved in.
+              involved in..
             </p>
             <RegForm
               sectors={sectors}

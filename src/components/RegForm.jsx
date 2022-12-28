@@ -20,13 +20,7 @@ const RegForm = ({
   const onSubmitHand = (e) => {
     e.preventDefault();
     setTodos([
-      ...todos,
-      {
-        name: inputText,
-        sectors: sectors,
-        agree: true,
-        id: Math.random() * 1000,
-      },
+      ...todos, { name: inputText, sectors: sectors, agree: true, id: Math.random() * 1000, },
     ]);
     setInputText("");
     setSectors("");
